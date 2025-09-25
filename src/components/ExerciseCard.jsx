@@ -2,6 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Stack, Typography } from '@mui/material';
 import Back from "./../assets/images/Gemini_Generated_Image_z1zrj2z1zrj2z1zr.png"
+import Chest from "./../assets/images/chest.jpg"
+import Cardio from "./../assets/images/cardio.jpg"
+import Lower_arms from "./../assets/images/lowerarms.jpg"
+import Lower_legs from "./../assets/images/lowerlegs.jpg"
+import Neck from "./../assets/images/neck.jpg"
+import Shoulder from "./../assets/images/shoulder.jpg"
+import Upper_arms from "./../assets/images/upperarms.jpg"
+import Upper_legs from "./../assets/images/upperlegs.jpg"
+import Waist from "./../assets/images/waist.jpg"
 const ExerciseCard = ({ exercise }) => (
     
   <Link className="exercise-card" to={`/exercise/${exercise.id}`}>
