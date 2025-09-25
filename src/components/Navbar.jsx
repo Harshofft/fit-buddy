@@ -13,7 +13,8 @@ function Navbar() {
        fontSize='24px'
        alignItems='flex-end'>
       <Link to='/' style={{textDecoration:"none",color:"#3a1212", borderBottom:"3px solid #ff2625"}}>Home</Link>
-      <Link to='/exercise/:id' style={{textDecoration:"none",color:"#3a1212"}}>Exercise</Link>
+      <Link to='/' style={{textDecoration:"none",color:"#3a1212"}}> <a href="#exercises" style={{ textDecoration: 'none', color: '#3A1212' }}>Exercises</a></Link>
+      <Link to='/project' style={{textDecoration:"none",color:"#3a1212"}}>AI</Link>
       </Stack>
     </Stack>
   )
