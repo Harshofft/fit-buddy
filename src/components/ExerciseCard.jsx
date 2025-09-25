@@ -11,11 +11,11 @@ import Shoulder from "./../assets/images/shoulder.jpg"
 import Upper_arms from "./../assets/images/upperarms.jpg"
 import Upper_legs from "./../assets/images/upperlegs.jpg"
 import Waist from "./../assets/images/waist.jpg"
-
+import Full from "./../assets/images/anastase-maragos-9dzWZQWZMdE-unsplash.jpg"
 const ExerciseCard = ({ exercise }) => (
     
   <Link className="exercise-card" to={`/exercise/${exercise.id}`}>
-    <img src={exercise.bodyPart=="back"?Back:exercise.bodyPart=="chest"?Chest:exercise.bodyPart=="cardio"?Cardio:exercise.bodyPart=="lower_arms"?Lower_arms:exercise.bodyPart=="lower_legs"?Lower_legs:exercise.bodyPart=="neck"?Neck:exercise.bodyPart=="shoulders"?Shoulder:exercise.bodyPart=="upper_arms"?Upper_arms:exercise.bodyPart=="upper_legs"?Upper_legs:exercise.bodyPart=="waist"?Waist:exercise} alt={exercise.name} loading="lazy" />
+    <img src={exercise.bodyPart=="back"?Back:exercise.bodyPart=="chest"?Chest:exercise.bodyPart=="cardio"?Cardio:exercise.bodyPart=="lower arms"?Lower_arms:exercise.bodyPart=="lower legs"?Lower_legs:exercise.bodyPart=="neck"?Neck:exercise.bodyPart=="shoulders"?Shoulder:exercise.bodyPart=="upper arms"?Upper_arms:exercise.bodyPart=="upper legs"?Upper_legs:exercise.bodyPart=="waist"?Waist:Full} alt={exercise.name} loading="lazy" />
     <Stack direction="row">
       <Button sx={{ ml: '21px', color: '#fff', background: '#FFA9A9', fontSize: '14px', borderRadius: '20px', textTransform: 'capitalize' }}>
         {exercise.bodyPart}

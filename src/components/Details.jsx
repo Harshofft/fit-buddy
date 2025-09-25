@@ -34,7 +34,7 @@ const Detail = ({ exerciseDetail }) => {
 
   return (
     <Stack gap="60px" sx={{ flexDirection: { lg: 'row' }, p: '20px', alignItems: 'center' }}>
-      <img src={bodyPart=="back"?Back:bodyPart=="chest"?Chest:bodyPart=="cardio"?Cardio:bodyPart=="lower_arms"?Lower_arms:bodyPart=="lower_legs"?Lower_legs:bodyPart=="neck"?Neck:bodyPart=="shoulders"?Shoulder:bodyPart=="upper_arms"?Upper_arms:bodyPart=="upper_legs"?Upper_legs:bodyPart=="waist"?Waist:gifUrl} alt={name} loading="lazy" className="detail-image" />
+      <img src={bodyPart=="back"?Back:bodyPart=="chest"?Chest:bodyPart=="cardio"?Cardio:bodyPart=="lower arms"?Lower_arms:bodyPart=="lower legs"?Lower_legs:bodyPart=="neck"?Neck:bodyPart=="shoulders"?Shoulder:bodyPart=="upper arms"?Upper_arms:bodyPart=="upper legs"?Upper_legs:bodyPart=="waist"?Waist:gifUrl} alt={name} loading="lazy" className="detail-image" />
       <Stack sx={{ gap: { lg: '35px', xs: '20px' } }}>
         <Typography sx={{ fontSize: { lg: '64px', xs: '30px' } }} fontWeight={700} textTransform="capitalize">
           {name}

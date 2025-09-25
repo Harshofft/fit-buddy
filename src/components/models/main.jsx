@@ -70,6 +70,7 @@ const CameraComponent = ({ setImage, setImagePreview, onImagePresent, darkMode }
 const GeminiImageText = () => {
   const [prompt, setPrompt] = useState("");
   const [output, setOutput] = useState("");
+  const [weight, setWeight] = useState(0);
   const [imagePreview, setImagePreview] = useState(null);
   const [cameraImage, setCameraImage] = useState(null);
   const [showOutput, setShowOutput] = useState(false);
@@ -79,9 +80,9 @@ const GeminiImageText = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   const defaultPrompts = [
-    "Give me nutritional breakdown of this food (calories, protein, carbs, fats).",
+    "Give me nutritional breakdown of this food (calories, protein, carbs, fats)for 100 grams of this food.",
     "Suggest if this food is good for muscle gain.",
-    "Is this food suitable for a fat-loss diet?",
+    "Is this food suitable for a fat-loss diet? ",
   ];
 
   const handleImageChange = (event) => {
@@ -121,7 +122,7 @@ const GeminiImageText = () => {
         {
           role: "user",
           parts: [
-            { text: prompt || defaultPrompts[0] },
+            { text: prompt +"give me protein, kcal, fiber,carbs content of "+ weight+" grams" || defaultPrompts[0]  },
             {
               inlineData: {
                 mimeType: imageDataUrl.startsWith("data:image/jpeg") ? "image/jpeg" : "image/png",
@@ -265,6 +266,16 @@ const GeminiImageText = () => {
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
               className={`border rounded-lg px-3 py-2 w-full text-sm ${
+                darkMode ? "bg-gray-800 border-gray-600 text-gray-200 placeholder-gray-400" : "bg-white border-gray-300 text-gray-900"
+              }`}
+            />
+            <input
+              type="number"
+              name="weight"
+              placeholder="Enter your weight in grams..."
+              value={weight}
+              onChange={(e) => setWeight(e.target.value)}
+              className={`border rounded-lg px-3 py-2 w-full text-sm mt-2 ${
                 darkMode ? "bg-gray-800 border-gray-600 text-gray-200 placeholder-gray-400" : "bg-white border-gray-300 text-gray-900"
               }`}
             />
