@@ -11,6 +11,7 @@ import Shoulder from "./../assets/images/shoulder.jpg"
 import Upper_arms from "./../assets/images/upperarms.jpg"
 import Upper_legs from "./../assets/images/upperlegs.jpg"
 import Waist from "./../assets/images/waist.jpg"
+
 const ExerciseCard = ({ exercise }) => (
     
   <Link className="exercise-card" to={`/exercise/${exercise.id}`}>
