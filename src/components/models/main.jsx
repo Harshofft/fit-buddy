@@ -117,7 +117,7 @@ const GeminiImageText = () => {
     try {
       let imageDataUrl = cameraImage || imagePreview;
       const genAI = new GoogleGenerativeAI(API_KEY);
-      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+      const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
       const contents = [
         {
           role: "user",
@@ -192,7 +192,7 @@ const GeminiImageText = () => {
         </div>
       ) : (
         <>
-          <h1 className="text-2xl mb-4 font-bold text-center">Image Analysis</h1>
+          <h1 className="text-2xl mb-4 font-bold text-center">AI Food Analysis</h1>
 
           <div className="flex flex-col md:flex-row items-start justify-center gap-4">
             <div
